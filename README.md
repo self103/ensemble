@@ -12,3 +12,5 @@
 
     <code>$ export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"</code>
 
+##For first time **Swift** Developers
+1. You can find a [brief intro](https://developer.apple.com/library/prerelease/content/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-ID1) to the language to begin to understand basic syntax, etc
