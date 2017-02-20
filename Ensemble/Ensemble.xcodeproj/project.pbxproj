@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		325FD8171E3ACE4800DDC85E /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325FD8141E3ACE4800DDC85E /* SpotifyAudioPlayback.framework */; };
+		325FD8181E3ACE4800DDC85E /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325FD8151E3ACE4800DDC85E /* SpotifyAuthentication.framework */; };
+		325FD8191E3ACE4800DDC85E /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325FD8161E3ACE4800DDC85E /* SpotifyMetadata.framework */; };
+		327AED811E4A9ADA00E14F68 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327AED801E4A9ADA00E14F68 /* AVFoundation.framework */; };
+		327AED831E4A9AED00E14F68 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327AED821E4A9AED00E14F68 /* SystemConfiguration.framework */; };
 		32C5B0D61E2F18D300902CB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C5B0D51E2F18D300902CB6 /* AppDelegate.swift */; };
 		32C5B0D81E2F18D300902CB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C5B0D71E2F18D300902CB6 /* ViewController.swift */; };
 		32C5B0DB1E2F18D300902CB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C5B0D91E2F18D300902CB6 /* Main.storyboard */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		325FD8141E3ACE4800DDC85E /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAudioPlayback.framework; path = Frameworks/SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		325FD8151E3ACE4800DDC85E /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = Frameworks/SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		325FD8161E3ACE4800DDC85E /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyMetadata.framework; path = Frameworks/SpotifyMetadata.framework; sourceTree = "<group>"; };
+		327AED801E4A9ADA00E14F68 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		327AED821E4A9AED00E14F68 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		32C5B0D21E2F18D300902CB6 /* Ensemble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ensemble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C5B0D51E2F18D300902CB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32C5B0D71E2F18D300902CB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +64,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327AED831E4A9AED00E14F68 /* SystemConfiguration.framework in Frameworks */,
+				327AED811E4A9ADA00E14F68 /* AVFoundation.framework in Frameworks */,
+				325FD8171E3ACE4800DDC85E /* SpotifyAudioPlayback.framework in Frameworks */,
+				325FD8191E3ACE4800DDC85E /* SpotifyMetadata.framework in Frameworks */,
+				325FD8181E3ACE4800DDC85E /* SpotifyAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +89,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321AB4EB1E3ACC7900BE67A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				327AED821E4A9AED00E14F68 /* SystemConfiguration.framework */,
+				327AED801E4A9ADA00E14F68 /* AVFoundation.framework */,
+				325FD8141E3ACE4800DDC85E /* SpotifyAudioPlayback.framework */,
+				325FD8151E3ACE4800DDC85E /* SpotifyAuthentication.framework */,
+				325FD8161E3ACE4800DDC85E /* SpotifyMetadata.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		32C5B0C91E2F18D300902CB6 = {
 			isa = PBXGroup;
 			children = (
+				321AB4EB1E3ACC7900BE67A3 /* Frameworks */,
 				32C5B0D41E2F18D300902CB6 /* Ensemble */,
 				32C5B0E91E2F18D300902CB6 /* EnsembleTests */,
 				32C5B0F41E2F18D300902CB6 /* EnsembleUITests */,
@@ -410,6 +438,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Ensemble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dsnk.Ensemble;
@@ -422,6 +454,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Ensemble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dsnk.Ensemble;
@@ -503,6 +539,7 @@
 				32C5B0FC1E2F18D300902CB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32C5B0FD1E2F18D300902CB6 /* Build configuration list for PBXNativeTarget "EnsembleTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +548,7 @@
 				32C5B0FF1E2F18D300902CB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32C5B1001E2F18D300902CB6 /* Build configuration list for PBXNativeTarget "EnsembleUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +557,7 @@
 				32C5B1021E2F18D300902CB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

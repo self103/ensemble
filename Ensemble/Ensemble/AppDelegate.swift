@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import SafariServices
+import "SpotifyAudioPlayback.h"
+import SpotifyAudioPlayback.h
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
